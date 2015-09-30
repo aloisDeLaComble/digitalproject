@@ -1,0 +1,44 @@
+{
+    "name": "CreateProjectSpecification.test",
+    "testName": "CreateProjectSpecification",
+    "className": "CreateProjectSpecification",
+    "contextName": "CreateProjectSpecification",
+    "infoTmar": "2014-06-03",
+    "report": {
+        "iteration": 0,
+        "executionDate": "2015-09-30T14:18:18+0000",
+        "paragraphs": {
+            "1": {
+                "type": "TEXT",
+                "text": "\nDescription\n\n\nHere are the test values\n"
+            },
+            "2": {
+                "type": "EACH",
+                "name": "sequence"
+            },
+            "3": {
+                "type": "EACH",
+                "name": "sequence",
+                "nbrLines": 1,
+                "isInline": false,
+                "columns": [
+                    "projectName",
+                    "student1Firstname "
+                ],
+                "columnsCC": [
+                    "projectName",
+                    "student1Firstname"
+                ],
+                "textPosition": [
+                    0,
+                    1
+                ],
+                "iterations": {
+                    "begin": 1,
+                    "end": 1
+                }
+            }
+        },
+        "nbrIterations": 1
+    }
+}

@@ -1,0 +1,62 @@
+<SJS module="digitalproject" creation = "Wed Sep 30 16:57:33 CEST 2015" SJSExportVersion = "1.0">
+    <Domain>
+       <IdDomain Id="Traceable" type="Interface"/>
+       <Field name="createdBy" type="string" entity="Traceable"/>
+       <Field name="createTimestamp" type="date" entity="Traceable"/>
+       <Field name="lastUpdatedBy" type="string" entity="Traceable"/>
+       <Field name="lastUpdateTimestamp" type="date" entity="Traceable"/>
+       <IdDomain Id="Project" type="Entity"/>
+       <Field name="name" type="string" entity="Project"/>
+       <Field name="technologies" type="set" entity="Project" ref="Technology"/>
+       <Field name="technicalTrainers" type="set" entity="Project" ref="Trainer"/>
+       <Field name="usesTrainers" type="set" entity="Project" ref="Trainer"/>
+       <Field name="students" type="set" entity="Project" ref="Student"/>
+       <IdDomain Id="Project-technologies" type="collection" entity="Project" ref="Technology"/>
+       <IdDomain Id="Project-technicalTrainers" type="collection" entity="Project" ref="Trainer"/>
+       <IdDomain Id="Project-usesTrainers" type="collection" entity="Project" ref="Trainer"/>
+       <IdDomain Id="Project-students" type="collection" entity="Project" ref="Student"/>
+       <IdDomain Id="Technology" type="Entity"/>
+       <Field name="name" type="string" entity="Technology"/>
+       <Field name="projects" type="set" entity="Technology" ref="Project"/>
+       <Field name="studentsAbleToUseIt" type="set" entity="Technology" ref="Technology"/>
+       <Field name="trainersAbleToTeachIt" type="set" entity="Technology" ref="Technology"/>
+       <Field name="createTimestamp" type="date" entity="Technology"/>
+       <Field name="lastUpdateTimestamp" type="date" entity="Technology"/>
+       <IdDomain Id="Technology-projects" type="collection" entity="Technology" ref="Project"/>
+       <IdDomain Id="Technology-studentsAbleToUseIt" type="collection" entity="Technology" ref="Technology"/>
+       <IdDomain Id="Technology-trainersAbleToTeachIt" type="collection" entity="Technology" ref="Technology"/>
+       <IdDomain Id="Person" type="Interface"/>
+       <Field name="lastname" type="string" entity="Person"/>
+       <Field name="firstname" type="string" entity="Person"/>
+       <Field name="createTimestamp" type="date" entity="Person"/>
+       <Field name="lastUpdateTimestamp" type="date" entity="Person"/>
+       <IdDomain Id="Trainer" type="Entity"/>
+       <Field name="projectsAsTechnicalTrainer" type="set" entity="Trainer" ref="Project"/>
+       <Field name="projectsAsUsesTrainer" type="set" entity="Trainer" ref="Project"/>
+       <Field name="technologies" type="set" entity="Trainer" ref="Technology"/>
+       <Field name="createTimestamp" type="date" entity="Trainer"/>
+       <Field name="lastUpdateTimestamp" type="date" entity="Trainer"/>
+       <IdDomain Id="Trainer-projectsAsTechnicalTrainer" type="collection" entity="Trainer" ref="Project"/>
+       <IdDomain Id="Trainer-projectsAsUsesTrainer" type="collection" entity="Trainer" ref="Project"/>
+       <IdDomain Id="Trainer-technologies" type="collection" entity="Trainer" ref="Technology"/>
+       <IdDomain Id="Student" type="Entity"/>
+       <Field name="technologies" type="set" entity="Student" ref="Technology"/>
+       <Field name="projects" type="set" entity="Student" ref="Project"/>
+       <Field name="createTimestamp" type="date" entity="Student"/>
+       <Field name="lastUpdateTimestamp" type="date" entity="Student"/>
+       <IdDomain Id="Student-technologies" type="collection" entity="Student" ref="Technology"/>
+       <IdDomain Id="Student-projects" type="collection" entity="Student" ref="Project"/>
+       <IdDomain Id="Cat" type="Entity"/>
+       <Field name="name" type="string" entity="Cat"/>
+       <Field name="createTimestamp" type="date" entity="Cat"/>
+       <Field name="lastUpdateTimestamp" type="date" entity="Cat"/>
+       <Field name="createdBy" type="string" entity="Project"/>
+       <Field name="createTimestamp" type="date" entity="Project"/>
+       <Field name="lastUpdatedBy" type="string" entity="Project"/>
+       <Field name="lastUpdateTimestamp" type="date" entity="Project"/>
+       <Field name="lastname" type="string" entity="Trainer"/>
+       <Field name="firstname" type="string" entity="Trainer"/>
+       <Field name="lastname" type="string" entity="Student"/>
+       <Field name="firstname" type="string" entity="Student"/>
+    </Domain>
+</SJS>

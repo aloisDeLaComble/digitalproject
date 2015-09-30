@@ -7,18 +7,33 @@ form('Project.pane',
 	parent:'decoratedView',
 	labelsPosition:'ASIDE',
 	columnCount:2,
-	fields:['name','students'])
+	fields:['name','students','technologies','usesTrainers','technicalTrainers']){
+		actionMap{
+				actionList('FILE'){
+					action(ref:'saveModuleObjectFrontAction')
+					action(ref:'reloadModuleObjectFrontAction')
+			  }
+		}
+	}
 
+/*
 form('Project.module.view',
 	parent:'decoratedView',
 	columnCount:1){
-		actionMap{
-			actionList('FILE'){
-				action(ref:'saveModuleObjectFrontAction')
-				action(ref:'reloadModuleObjectFrontAction')
-		  }
+		
 		}
 	  }
+*/
+	
+table'Project-students.table',
+	parent:'decoratedView',
+	actionMap:'masterDetailActionMap'
+	
+split_vertical'Project.proj.view',
+	model:'Project',
+	top:'Project.pane',
+	bottom:'Project-students.table'
+
 
 /*table('Project.module.view',
 	parent:'Project.proj.view')	
@@ -29,11 +44,7 @@ form('Project.module.view',
 */	 
 
 
-/*split_vertical'Student.proj.view',
-	 model:'Project',
-	 top:'Project.pane',
-	 bottom:'Project-students.table'
-*/	 
+ 
 
 	 
 form('Student.pane',

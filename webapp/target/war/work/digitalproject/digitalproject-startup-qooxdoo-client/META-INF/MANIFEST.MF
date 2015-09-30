@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Implementation-Title: digital application - Startup - Qooxdoo - Client
+Implementation-Version: 1.0-SNAPSHOT
+Archiver-Version: Plexus Archiver
+Built-By: aloisprieurdelacomble
+Specification-Vendor: digital tech year
+Specification-Title: digital application - Startup - Qooxdoo - Client
+Implementation-Vendor-Id: digitalproject
+Created-By: Apache Maven 3.2.1
+Build-Jdk: 1.8.0_60
+Specification-Version: 1.0-SNAPSHOT
+Implementation-Vendor: digital tech year
+

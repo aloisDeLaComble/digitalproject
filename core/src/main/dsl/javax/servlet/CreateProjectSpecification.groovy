@@ -1,0 +1,29 @@
+package javax.servlet
+
+import digitalproject.model.Project
+import digitalproject.model.Student
+import org.jspresso.contrib.tmar.core.Tmar4JUnit
+import org.jspresso.framework.model.entity.IEntityFactory
+import org.junit.Test;
+
+class CreateProjectSpecification extends Tmar4JUnit {
+
+	@Test
+	void createProjectTest() {
+		eachIteration('test') { tmar ->
+			//IEntityFactory entityFactory = getBackendController().getEntityFactory()
+			//Project project = entityFactory.createEntityInstance(Project.class)
+			Project project = createCat("Waouw")
+			
+			//Student student1 = entityFactory.createEntityInstance(student.class)
+			//student1.firstName = "Neil"
+			//student1.lastName = "Amstrong"
+			
+			//Set<Student> students = new HashSet<Student>(student1)
+			//project.setStudents(students)
+			
+			tmar.student1Firstname = "Neil"
+            }
+	  }
+
+}

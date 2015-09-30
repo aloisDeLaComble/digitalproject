@@ -1,0 +1,37 @@
+Invoking Maven for the goals: [org.apache.maven.plugins:maven-javadoc-plugin:2.9.1:javadoc] with no properties
+
+M2_HOME=/Users/aloisprieurdelacomble/Eclipse/apache-maven-3.2.1
+MAVEN_OPTS=null
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre
+JAVA_OPTS=null
+
+[INFO] Scanning for projects...
+[INFO] Downloading: http://repository.codehaus.org/org/codehaus/groovy/groovy-eclipse-batch/maven-metadata.xml
+[INFO] Downloading: http://nexus.codehaus.org/snapshots/org/codehaus/groovy/groovy-eclipse-batch/maven-metadata.xml
+[WARNING] Could not transfer metadata org.codehaus.groovy:groovy-eclipse-batch/maven-metadata.xml from/to codehaus.org (http://repository.codehaus.org): repository.codehaus.org: unknown error
+[WARNING] Could not transfer metadata org.codehaus.groovy:groovy-eclipse-batch/maven-metadata.xml from/to codehaus-snapshots (http://nexus.codehaus.org/snapshots/): nexus.codehaus.org: unknown error
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building digital application - Startup - Qooxdoo - Client 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-javadoc-plugin:2.9.1:javadoc (default-cli) @ digitalproject-startup-qooxdoo-client >>>
+[INFO] 
+[INFO] --- groovy-eclipse-compiler:2.7.0-01:add-groovy-build-paths (default-add-groovy-build-paths) @ digitalproject-startup-qooxdoo-client ---
+[WARNING] Failure to transfer org.codehaus.groovy:groovy-eclipse-batch/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus.org has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.groovy:groovy-eclipse-batch/maven-metadata.xml from/to codehaus.org (http://repository.codehaus.org): repository.codehaus.org: unknown error
+[WARNING] Failure to transfer org.codehaus.groovy:groovy-eclipse-batch/maven-metadata.xml from http://nexus.codehaus.org/snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of codehaus-snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.groovy:groovy-eclipse-batch/maven-metadata.xml from/to codehaus-snapshots (http://nexus.codehaus.org/snapshots/): nexus.codehaus.org: unknown error
+[INFO] Adding /src/main/groovy to the list of source folders
+[INFO] Adding /src/test/groovy to the list of test source folders
+[INFO] 
+[INFO] <<< maven-javadoc-plugin:2.9.1:javadoc (default-cli) @ digitalproject-startup-qooxdoo-client <<<
+[INFO] 
+[INFO] --- maven-javadoc-plugin:2.9.1:javadoc (default-cli) @ digitalproject-startup-qooxdoo-client ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.195 s
+[INFO] Finished at: 2015-09-28T18:06:06+01:00
+[INFO] Final Memory: 14M/209M
+[INFO] ------------------------------------------------------------------------

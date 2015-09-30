@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: digital application - Webapp
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: aloisprieurdelacomble
+Specification-Vendor: digital tech year
+Specification-Title: digital application - Webapp
+Implementation-Vendor-Id: digitalproject
+Build-Jdk: 1.8.0_60
+Specification-Version: 1.0-SNAPSHOT
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: digital tech year
+

@@ -37,41 +37,24 @@ workspace('proj.workspace'){
 		filterModule('proj.projects.module',
 				component:'Project',
 				//filterView:'Project.organization.view',
-				detailView:'Project.module.view'
+				detailView:'Project.proj.view'
 				)
+		filterModule('proj.students.module',
+			component:'Student')
+		filterModule('proj.technologies.module',
+			component:'Technology')
+		filterModule('proj.trainers.module',
+			component:'Trainer')
 	//}
  }
 
-workspace('stud.workspace'){
-	//nodeModule('masterdata.entities.module',
-	//			icon:'icon.png'){
-		filterModule('stud.students.module',
-				component:'Student')
-	//}
- }
 
-workspace('train.workspace'){
-	//nodeModule('masterdata.entities.module',
-	//			icon:'icon.png'){
-		filterModule('train.trainers.module',
-				component:'Trainer')
-	//}
- }
-
-workspace('tech.workspace'){
-	//nodeModule('masterdata.entities.module',
-	//			icon:'icon.png'){
-		filterModule('tech.technologies.module',
-				component:'Technology')
-	//}
- }
- 
 
 controller 'digitalproject.name',
 icon:'icon.png',
 context:'digitalproject',
 language:'en',
-workspaces:['proj.workspace','stud.workspace','train.workspace','tech.workspace']
+workspaces:['proj.workspace']
 
 
 /*controller('digitalproject.controller',

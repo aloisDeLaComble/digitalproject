@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="20046522" compressedSize="10887536">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="473">
+      <data type="metaData" size="405"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+      <data type="enableTelemetry" size="0"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="20046049">
+      <frame name="_FlexApplicationStartup_mx_managers_SystemManager" size="84871" frame="1"/>
+      <frame name="FlexApplicationStartup" size="19961178" frame="2"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="1604461">
+      <abc name="frame2" size="1519700" frame="2"/>
+      <abc name="frame1" size="84761" frame="1"/>
+    </actionScript>
+
+    <!-- defineFont/2/3/4. -->
+    <fonts totalSize="17681769">
+      <font name="_FontFaceRules__embed__font_MicroHei_bold_normal_461808761" fontName="MicroHei" size="8842240" frame="2"/>
+      <font name="_FontFaceRules__embed__font_MicroHei_medium_normal_1438091044" fontName="MicroHei" size="8839529" frame="2"/>
+    </fonts>
+
+    <!-- defineSprite. -->
+    <sprites totalSize="2891">
+      <sprite size="108" frame="2"/>
+      <sprite size="92" frame="2"/>
+      <sprite size="92" frame="2"/>
+      <sprite size="92" frame="2"/>
+      <sprite size="92" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_mx_skins_cursor_DragReject_815417725" size="79" frame="2"/>
+      <sprite size="79" frame="2"/>
+      <sprite size="79" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_mx_skins_cursor_BusyCursor_353655375" size="76" frame="2"/>
+      <sprite size="76" frame="2"/>
+      <sprite size="41" frame="2"/>
+      <sprite size="41" frame="2"/>
+      <sprite size="41" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_mx_skins_cursor_VBoxDivider_939517946" size="40" frame="2"/>
+      <sprite size="40" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_TreeFolderClosed_1301913531" size="40" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_TreeNodeIcon_1350259420" size="40" frame="2"/>
+      <sprite size="40" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_mx_skins_cursor_HBoxDivider_2055356868" size="40" frame="2"/>
+      <sprite size="40" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_cursorStretch_1607766190" size="40" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_TreeFolderOpen_1283453015" size="40" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_mx_skins_cursor_DragMove_672122389" size="27" frame="2"/>
+      <sprite size="26" frame="2"/>
+      <sprite size="26" frame="2"/>
+      <sprite size="26" frame="2"/>
+      <sprite size="26" frame="2"/>
+      <sprite size="26" frame="2"/>
+      <sprite size="26" frame="2"/>
+      <sprite size="26" frame="2"/>
+      <sprite size="26" frame="2"/>
+      <sprite size="26" frame="2"/>
+      <sprite size="25" frame="2"/>
+      <sprite size="25" frame="2"/>
+      <sprite size="25" frame="2"/>
+      <sprite size="25" frame="2"/>
+      <sprite size="25" frame="2"/>
+      <sprite size="25" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923___brokenImage_792406215" size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_mx_skins_cursor_DragLink_672096814" size="24" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_MenuBranchEnabled_1476946323" size="24" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_MenuRadioEnabled_1799763064" size="24" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_MenuCheckDisabled_1264927224" size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_MenuCheckEnabled_381096549" size="24" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_MenuRadioDisabled_154052027" size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_mx_skins_cursor_DragCopy_671834809" size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_MenuBranchDisabled_491373568" size="24" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_MenuSeparator_1399205447" size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite name="_class_embed_css_Assets_swf__2043918923_mx_skins_BoxDividerSkin_1395028441" size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite size="24" frame="2"/>
+      <sprite name="flexlib.containers.ButtonScrollingCanvas_DEFAULT_DOWN_BUTTON" size="19" frame="2"/>
+      <sprite name="flexlib.containers.ButtonScrollingCanvas_DEFAULT_LEFT_BUTTON" size="19" frame="2"/>
+      <sprite name="flexlib.containers.ButtonScrollingCanvas_DEFAULT_RIGHT_BUTTON" size="19" frame="2"/>
+      <sprite name="flexlib.containers.ButtonScrollingCanvas_DEFAULT_UP_BUTTON" size="19" frame="2"/>
+    </sprites>
+
+    <!-- defineShape/2/3/4. -->
+    <shapes totalSize="3727">
+      <shape size="185" frame="2"/>
+      <shape size="105" frame="2"/>
+      <shape size="103" frame="2"/>
+      <shape size="100" frame="2"/>
+      <shape size="97" frame="2"/>
+      <shape size="97" frame="2"/>
+      <shape size="90" frame="2"/>
+      <shape size="82" frame="2"/>
+      <shape size="82" frame="2"/>
+      <shape size="82" frame="2"/>
+      <shape size="72" frame="2"/>
+      <shape size="69" frame="2"/>
+      <shape size="64" frame="2"/>
+      <shape size="64" frame="2"/>
+      <shape size="64" frame="2"/>
+      <shape size="64" frame="2"/>
+      <shape size="64" frame="2"/>
+      <shape size="63" frame="2"/>
+      <shape size="62" frame="2"/>
+      <shape size="61" frame="2"/>
+      <shape size="60" frame="2"/>
+      <shape size="58" frame="2"/>
+      <shape size="58" frame="2"/>
+      <shape size="57" frame="2"/>
+      <shape size="57" frame="2"/>
+      <shape size="57" frame="2"/>
+      <shape size="57" frame="2"/>
+      <shape size="57" frame="2"/>
+      <shape size="57" frame="2"/>
+      <shape size="56" frame="2"/>
+      <shape size="56" frame="2"/>
+      <shape size="56" frame="2"/>
+      <shape size="56" frame="2"/>
+      <shape size="56" frame="2"/>
+      <shape size="55" frame="2"/>
+      <shape size="53" frame="2"/>
+      <shape size="52" frame="2"/>
+      <shape size="52" frame="2"/>
+      <shape size="47" frame="2"/>
+      <shape size="46" frame="2"/>
+      <shape size="46" frame="2"/>
+      <shape size="45" frame="2"/>
+      <shape size="45" frame="2"/>
+      <shape size="45" frame="2"/>
+      <shape size="45" frame="2"/>
+      <shape size="44" frame="2"/>
+      <shape size="43" frame="2"/>
+      <shape size="43" frame="2"/>
+      <shape size="43" frame="2"/>
+      <shape size="40" frame="2"/>
+      <shape size="40" frame="2"/>
+      <shape size="39" frame="2"/>
+      <shape size="39" frame="2"/>
+      <shape size="39" frame="2"/>
+      <shape size="39" frame="2"/>
+      <shape size="38" frame="2"/>
+      <shape size="38" frame="2"/>
+      <shape size="38" frame="2"/>
+      <shape size="38" frame="2"/>
+      <shape size="37" frame="2"/>
+      <shape size="33" frame="2"/>
+      <shape size="33" frame="2"/>
+      <shape size="33" frame="2"/>
+      <shape size="31" frame="2"/>
+    </shapes>
+
+    <!-- defineBits, definebitsJPEG2/3/4, or defineBitsLossless/2 -->
+    <bitmaps totalSize="19048">
+      <bitmap name="org.jspresso.framework.flex.controller.ThemedFlexController__logo" size="9366" frame="2"/>
+      <bitmap name="org.openscales.core.control.Zoom_zoomWorldMiniImg" size="776" frame="2"/>
+      <bitmap name="org.jspresso.framework.view.flex.DefaultFlexViewFactory__iconTemplate" size="766" frame="2"/>
+      <bitmap name="org.openscales.core.format.KMLFormat__defaultImage" size="635" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_prevMonthOverSkin_png__168302501_1227484936" size="424" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_nextMonthOverSkin_png__737175653_579012296" size="416" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateField_overSkin_png__659116661_1268555534" size="405" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateField_downSkin_png_1307305817_307408452" size="405" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateField_upSkin_png__994585582_703607831" size="403" frame="2"/>
+      <bitmap name="org.openscales.core.popup.Popup__closeImg" size="363" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateField_disabledSkin_png__1128514637_1813191334" size="363" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_nextMonthDownSkin_png_1229246825_2076619686" size="329" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_prevMonthDownSkin_png_1798119977_1641857638" size="323" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_prevMonthUpSkin_png__676756766_1142720243" size="319" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_nextMonthUpSkin_png_2053374498_960432947" size="317" frame="2"/>
+      <bitmap name="org.openscales.core.control.Zoom_zoomPlusMiniImg" size="281" frame="2"/>
+      <bitmap name="_class_embed_css_assets_images_closeaccordion2_png__960300339_261199560" size="280" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_nextMonthDisabledSkin_png_779197891_147962384" size="257" frame="2"/>
+      <bitmap name="_class_embed_css_images_icon_quit_png__915070858_1556361961" size="226" frame="2"/>
+      <bitmap name="org.openscales.core.control.Zoom_zoombarImg" size="224" frame="2"/>
+      <bitmap name="org.openscales.core.control.Zoom_zoomMinusMiniImg" size="201" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_prevMonthDisabledSkin_png__1908175229_691786960" size="185" frame="2"/>
+      <bitmap name="org.openscales.core.control.Zoom_sliderImg" size="161" frame="2"/>
+      <bitmap name="flex.utils.ui.resize.ResizeManager_resizeIcon" size="161" frame="2"/>
+      <bitmap size="143" frame="2"/>
+      <bitmap name="org.jspresso.framework.view.flex.CollapsibleAccordion_rightCloseIcon" size="117" frame="2"/>
+      <bitmap name="org.jspresso.framework.view.flex.CollapsibleAccordion_leftCloseIcon" size="114" frame="2"/>
+      <bitmap name="_class_embed_css_images_icon_circle_icon_minus_png_28756744_514724495" size="114" frame="2"/>
+      <bitmap name="_class_embed_css_images_tree_tree_open_icon_png_1687972751_1657277092" size="81" frame="2"/>
+      <bitmap name="_class_embed_css_images_tree_tree_closed_icon_png__1464538963_981661626" size="73" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_prevYearDisabledSkin_png__455530942_1880260615" size="51" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_prevYearDownSkin_png__611683992_312075473" size="50" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_nextYearDisabledSkin_png_185347842_167020217" size="50" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_nextYearDownSkin_png__1876960728_1160211951" size="48" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_align_left_png_1805896891" size="47" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_align_right_png_145372407" size="47" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_style_underline_png_1620631959" size="46" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_align_center_png_1170712745" size="45" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_nextYearOverSkin_png_451584090_763825281" size="45" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_bullet_png_438484549" size="44" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_style_italic_png_1205840077" size="43" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_style_bold_png_971285801" size="40" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_prevYearOverSkin_png_1716860826_1716862145" size="40" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_prevYearUpSkin_png_1430230497_1521785388" size="38" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_nextYearUpSkin_png__1114100063_1828731028" size="38" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_selectionIndicatorSkin_png__1812630023_1345724068" size="38" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_rollOverIndicatorSkin_png__541130248_1273534951" size="38" frame="2"/>
+      <bitmap name="_class_embed_css_images_dateChooser_DateChooser_todayIndicatorSkin_png__2084186140_13487467" size="38" frame="2"/>
+      <bitmap name="mx.controls.RichTextEditor__embed_mxml_assets_icon_align_justify_png_677912489" size="34" frame="2"/>
+    </bitmaps>
+
+    <!-- SWF, Pixel Bender, or other miscellaneous embed data. -->
+    <binaryData totalSize="33204">
+      <data name="org.openscales.core.Map_FRLocale" size="10995" frame="2"/>
+      <data name="org.openscales.core.Map_ENLocale" size="10327" frame="2"/>
+      <data name="mx.graphics.shaderClasses.SaturationShader_ShaderClass" size="2298" frame="2"/>
+      <data name="mx.graphics.shaderClasses.HueShader_ShaderClass" size="2268" frame="2"/>
+      <data name="mx.graphics.shaderClasses.SoftLightShader_ShaderClass" size="1920" frame="2"/>
+      <data name="mx.graphics.shaderClasses.LuminosityShader_ShaderClass" size="1282" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorShader_ShaderClass" size="1272" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorBurnShader_ShaderClass" size="1144" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorDodgeShader_ShaderClass" size="1074" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ExclusionShader_ShaderClass" size="624" frame="2"/>
+    </binaryData>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="8711">
+      <tag type="symbolClass" size="6264" frame="2"/>
+      <tag type="exportAssets" size="2310" frame="2"/>
+      <tag type="symbolClass" size="56" frame="1"/>
+      <tag type="frameLabel" size="52" frame="1"/>
+      <tag type="frameLabel" size="25" frame="2"/>
+      <tag type="showFrame" size="2" frame="1"/>
+      <tag type="showFrame" size="2" frame="2"/>
+    </frameData>
+  </swf>
+</report>
