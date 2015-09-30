@@ -3,7 +3,7 @@
 Interface('Traceable',
 	interceptors: 'TraceableLifecycleInterceptor',
 	uncloned: ['createTimestamp',
-			   'lastUpdateTimestamp']) {
+			   'lastUpdateTimestamp','lastUpdatedBy','createdBy']) {
   string_64 'createdBy'
   date_time 'createTimestamp', timeZoneAware: true, readOnly: true
   string_64 'lastUpdatedBy'
