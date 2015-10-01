@@ -4,16 +4,19 @@ import digitalproject.model.Project
 import digitalproject.model.Student
 import org.jspresso.contrib.tmar.core.Tmar4JUnit
 import org.jspresso.framework.model.entity.IEntityFactory
+import org.junit.Before;
 import org.junit.Test;
+//import digitalproject.BaseTest
+import digitalproject.BaseTest
 
-class CreateProjectSpecification extends Tmar4JUnit {
+
+class CreateProjectSpecification extends BaseTest {
 
 	@Test
 	void createProjectTest() {
 		eachIteration('test') { tmar ->
-			//IEntityFactory entityFactory = getBackendController().getEntityFactory()
-			//Project project = entityFactory.createEntityInstance(Project.class)
-			Project project = createCat("Waouw")
+			IEntityFactory entityFactory = getBackendController().getEntityFactory()
+			Project project = entityFactory.createEntityInstance(Project.class)
 			
 			//Student student1 = entityFactory.createEntityInstance(student.class)
 			//student1.firstName = "Neil"
