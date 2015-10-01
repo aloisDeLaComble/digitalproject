@@ -1,4 +1,4 @@
-package digitalproject.fr.stgroupe.stcv
+package fr.stgroupe.stcv
 import org.jspresso.framework.application.backend.IBackendController;
 import org.jspresso.framework.application.startup.AbstractBackendStartup;
 import org.springframework.beans.factory.BeanFactory;

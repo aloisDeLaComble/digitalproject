@@ -1,5 +1,6 @@
 package javax.servlet
 
+import digitalproject.BaseTest
 import digitalproject.model.Project
 import digitalproject.model.Student
 import org.jspresso.contrib.tmar.core.Tmar4JUnit
@@ -7,8 +8,6 @@ import org.jspresso.framework.model.entity.IEntityFactory
 import org.junit.Before;
 import org.junit.Test;
 //import digitalproject.BaseTest
-import digitalproject.BaseTest
-
 
 class CreateProjectSpecification extends BaseTest {
 

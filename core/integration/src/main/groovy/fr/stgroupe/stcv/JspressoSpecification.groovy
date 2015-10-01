@@ -1,4 +1,4 @@
-package digitalproject.fr.stgroupe.stcv;
+package fr.stgroupe.stcv;
 
 import java.security.acl.Group
 
@@ -22,7 +22,6 @@ import org.springframework.beans.factory.BeanFactory
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.jdbc.datasource.SingleConnectionDataSource
 import org.springframework.transaction.support.TransactionCallbackWithoutResult
-import digitalproject.fr.stgroupe.stcv.SpockBackendStartup
 
 /**
  * Implementation of the Spock specification but loading the JSpresso spring
