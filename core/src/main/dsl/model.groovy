@@ -19,16 +19,14 @@ Entity ('Project', extend:'Traceable'){
 	
 }
 
-Entity ('Technology'){
+Entity ('Technology', extend:'Traceable'){
 	string_64 'name'
 	set 'projects', ref:'Project', reverse:'Project-technologies'
 	set 'studentsAbleToUseIt', ref:'Technology', reverse:'Student-technologies'
 	set 'trainersAbleToTeachIt', ref:'Technology', reverse:'Trainer-technologies'
-	date_time 'createTimestamp', timeZoneAware: true, readOnly: true
-	date_time 'lastUpdateTimestamp', timeZoneAware: true, readOnly: true
 }
 
-Interface ('Person'){
+Interface ('Person', extend:'Traceable'){
 	string_64 'lastname'
 	string_64 'firstname'
 	date_time 'createTimestamp', timeZoneAware: true, readOnly: true
