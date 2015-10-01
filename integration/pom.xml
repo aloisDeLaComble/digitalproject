@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+	<groupId>digitalproject</groupId>
+	<artifactId>digitalproject</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<relativePath>../pom.xml</relativePath>
+  </parent>
+  <artifactId>stcv-integration</artifactId>
+  <packaging>jar</packaging>
+  <name>digital application</name>
+  
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>stcv-core</artifactId>
+    </dependency>
+         
+    <!-- Commons -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+    </dependency>
+    <dependency>
+      <artifactId>commons-httpclient</artifactId>
+      <groupId>commons-httpclient</groupId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-dbcp2</artifactId>
+    </dependency>
+
+    <!-- DB -->
+    <dependency>
+      <groupId>org.hsqldb</groupId>
+      <artifactId>hsqldb</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+ 
+    <!-- Log -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+    </dependency>
+    
+    <!-- Embedded app server -->    
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-server</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-servlet</artifactId>
+    </dependency> 
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-jmx</artifactId>
+    </dependency>
+    
+    <!-- Tmar -->    
+    <dependency>
+      <groupId>org.jspresso.contrib</groupId>
+      <artifactId>jspresso-tmar</artifactId>
+    </dependency>
+    
+  </dependencies>
+
+  <build>
+<!--     <testResources> -->
+<!--       <testResource> -->
+<!--         <directory>src/test/resources</directory> -->
+<!--         <filtering>true</filtering> -->
+<!--       </testResource> -->
+<!--     </testResources> -->
+
+
+    <plugins>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <useFile>false</useFile>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <compilerId>groovy-eclipse-compiler</compilerId>
+          <!-- set verbose to be true if you want lots of uninteresting messages -->
+          <!-- <verbose>true</verbose> -->
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-eclipse-compiler</artifactId>
+            <version>${groovy-eclipse-compiler}</version>
+          </dependency>
+		  <dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-eclipse-batch</artifactId>
+			<version>${groovy-eclipse-batch.version}</version>
+		  </dependency>
+        </dependencies>
+      </plugin>
+<!--       <plugin> -->
+<!--         Used by the continuous build to retrieve the war to deploy -->
+<!--         <artifactId>maven-dependency-plugin</artifactId> -->
+<!--         <configuration> -->
+<!--           <artifactItems> -->
+<!--             <artifactItem> -->
+<!--               <groupId>${project.groupId}</groupId> -->
+<!--               <artifactId>stcv-webapp</artifactId> -->
+<!--               <version>${project.version}</version> -->
+<!--               <type>war</type> -->
+<!--               <overWrite>true</overWrite> -->
+<!--             </artifactItem> -->
+<!--           </artifactItems> -->
+<!--           <stripVersion>true</stripVersion>  -->
+<!--         </configuration> -->
+<!--       </plugin> -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <properties>
+            <property>
+              <name>listener</name>
+              <value>org.jspresso.contrib.tmar.report.TmarReportJunitRunListener</value>
+            </property>
+          </properties>
+        </configuration>
+      </plugin>             
+	<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>add-generated-sources</id>
+            <phase>process-sources</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>${basedir}/src/main/groovy</source>
+              </sources>
+            </configuration>
+          </execution>
+          <execution>
+			<id>add-groovy-test-sources</id>
+			<phase>process-sources</phase>
+			<goals>
+				<goal>add-test-source</goal>
+			</goals>
+			<configuration>
+				<sources>
+					<source>${basedir}/src/test/groovy</source>
+				</sources>
+			</configuration>
+		  </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
