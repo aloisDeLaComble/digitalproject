@@ -1,0 +1,31 @@
+{
+  "info" : 
+  {
+    "name" : "digital application",
+
+    "summary" : "",
+    "description" : "",
+    
+    "homepage" : "www.google.fr",
+
+    "license" : "",
+    "authors" : 
+    [
+      {
+        "name" : "",
+        "email" : ""
+      }
+    ]
+  },
+  
+  "provides" : 
+  {
+    "namespace"   : "digitalproject",
+    "encoding"    : "utf-8",
+    "class"       : "js",
+    "resource"    : "resources",
+    "translation" : "translations",
+    "type"        : "application"
+  }
+}
+
