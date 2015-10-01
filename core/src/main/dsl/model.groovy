@@ -4,13 +4,15 @@ Interface('Traceable',
 	interceptors: 'TraceableLifecycleInterceptor',
 	uncloned: ['createTimestamp',
 			   'lastUpdateTimestamp','lastUpdatedBy','createdBy']) {
-  string_64 'createdBy'
+  string_64 'createdBy',readOnly:true
   date_time 'createTimestamp', timeZoneAware: true, readOnly: true
-  string_64 'lastUpdatedBy'
+  string_64 'lastUpdatedBy', readOnly:true
   date_time 'lastUpdateTimestamp', timeZoneAware: true, readOnly: true
 }
 
-Entity ('Project', extend:'Traceable'){
+Entity ('Project', extend:'Traceable',toString:'name',
+	rendered: ['name','lastUpdateTimestamp','lastUpdatedBy','createTimestamp','createdBy'],
+	queryable: ['name']){
 	string_64 'name'
 	set 'technologies', composition:true, ref:'Technology'
 	set 'technicalTrainers', composition:true, ref:'Trainer'
@@ -19,7 +21,9 @@ Entity ('Project', extend:'Traceable'){
 	
 }
 
-Entity ('Technology', extend:'Traceable'){
+Entity ('Technology', extend:'Traceable',toString:'name',
+	rendered: ['name','lastUpdateTimestamp','lastUpdatedBy','createTimestamp','createdBy'],
+	queryable: ['name']){
 	string_64 'name'
 	set 'projects', ref:'Project', reverse:'Project-technologies'
 	set 'studentsAbleToUseIt', ref:'Technology', reverse:'Student-technologies'
@@ -34,7 +38,10 @@ Interface ('Person', extend:'Traceable'){
 }
 
 Entity ('Trainer',
-		extend: 'Person'){
+		extend: 'Person', 
+		toString:'firstname',
+		rendered: ['firstname','lastname','lastUpdateTimestamp','lastUpdatedBy','createTimestamp','createdBy'],
+		queryable: ['firstname','lastname']){
 	set 'projectsAsTechnicalTrainer', ref:'Project', reverse:'Project-technicalTrainers'
 	set 'projectsAsUsesTrainer', ref:'Project', reverse:'Project-usesTrainers'
 	set 'technologies', composition:true, ref:'Technology'
@@ -43,16 +50,13 @@ Entity ('Trainer',
 }
 
 Entity ('Student',
-		extend: 'Person'){
+		extend: 'Person', 
+		toString:'firstname',
+		rendered: ['firstname','lastname','lastUpdateTimestamp','lastUpdatedBy','createTimestamp','createdBy'],
+		queryable: ['firstname','lastname']){
 	set 'technologies', composition:true, ref:'Technology'
 	set 'projects', ref:'Project', reverse:'Project-students'
 	date_time 'createTimestamp', timeZoneAware: true, readOnly: true
 	date_time 'lastUpdateTimestamp', timeZoneAware: true, readOnly: true
 }
 		
-Entity('Cat'){
-	string_64 'name'
-	date_time 'createTimestamp', timeZoneAware: true, readOnly: true
-	date_time 'lastUpdateTimestamp', timeZoneAware: true, readOnly: true
-}
-

@@ -32,19 +32,18 @@ workspaces:[
 
 
 workspace('proj.workspace'){
-	//nodeModule('masterdata.entities.module',
-	//			icon:'icon.png'){
 		filterModule('proj.projects.module',
 				component:'Project',
-				//filterView:'Project.organization.view',
 				detailView:'Project.proj.view'
 				)
 		filterModule('proj.students.module',
-			component:'Student')
-		filterModule('proj.technologies.module',
-			component:'Technology')
+			component:'Student',
+			detailView:'Student.proj.view')
 		filterModule('proj.trainers.module',
 			component:'Trainer')
+		filterModule('proj.technologies.module',
+			component:'Technology')
+		
 	//}
  }
 

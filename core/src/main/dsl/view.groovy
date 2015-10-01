@@ -15,15 +15,6 @@ form('Project.pane',
 			  }
 		}
 	}
-
-/*
-form('Project.module.view',
-	parent:'decoratedView',
-	columnCount:1){
-		
-		}
-	  }
-*/
 	
 table'Project-students.table',
 	parent:'decoratedView',
@@ -35,22 +26,29 @@ split_vertical'Project.proj.view',
 	bottom:'Project-students.table'
 
 
-/*table('Project.module.view',
-	parent:'Project.proj.view')	
-*/	
-/*table'Project-students.table',
-	 parent:'decoratedView',
-	 actionMap:'masterDetailActionMap'
-*/	 
-
-
  
 
 	 
 form('Student.pane',
 	parent:'decoratedView',
 	labelsPosition:'ASIDE',
-	columnCount:5)
+	columnCount:2){
+		actionMap{
+				actionList('FILE'){
+					action(ref:'saveModuleObjectFrontAction')
+					action(ref:'reloadModuleObjectFrontAction')
+			  }
+		}
+	}
+	
+table'Student-technologies.table',
+	parent:'decoratedView',
+	actionMap:'masterDetailActionMap'
+	
+split_vertical'Student.proj.view',
+	model:'Student',
+	top:'Student.pane',
+	bottom:'Student-technologies.table'
 
 form('Trainer.pane',
 	parent:'decoratedView',
@@ -62,38 +60,3 @@ form('Technology.pane',
 	labelsPosition:'ASIDE',
 	columnCount:5)
 
-
-	
-	/*
-form 'Student.pane',
-	parent:'decoratedView',
-	labelsPosition:'ABOVE',
-	columnCount:2*/
-	
-	/*
-table 'Project-students.table',
-  parent:'decoratedView'*/
-  
-/*split_vertical'Project.organization.view',
-  model:'Company',
-  top
-:'Company.tab.pane',
-  bottom
-:'Company-departments.table'
-*/
-	
-	
-
-
-/*split_vertical('project.view', 
-				actionMap:'beanModuleActionMap',
-				bean 'testView',
-parent:'project.view'){
-	top {
-		form(model:'Project')
-	}
-	bottom {
-		form(model:'Project-technologies')
-	}
-}
-*/
