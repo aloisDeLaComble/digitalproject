@@ -7,86 +7,113 @@
     <version>1.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
-  <artifactId>digitalproject-integration</artifactId>
+  <artifactId>digitalproject-webservices</artifactId>
   <packaging>jar</packaging>
-  <name>digital application - Integration</name>
-  
+  <name>digital application - Webservices</name>
+
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>digitalproject-core</artifactId>
     </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>digitalproject-webservices</artifactId>
-    </dependency>
-         
-    <!-- Commons -->
-    <dependency>
-      <groupId>commons-io</groupId>
-      <artifactId>commons-io</artifactId>
-    </dependency>
-    <dependency>
-      <artifactId>commons-httpclient</artifactId>
-      <groupId>commons-httpclient</groupId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-dbcp2</artifactId>
-    </dependency>
-
-    <!-- DB -->
-    <dependency>
-      <groupId>org.hsqldb</groupId>
-      <artifactId>hsqldb</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-    </dependency>
- 
-    <!-- Log -->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
-    </dependency>
     
-    <!-- Embedded app server -->    
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-server</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-servlet</artifactId>
-    </dependency> 
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-jmx</artifactId>
-    </dependency>
     
-    <!-- Tmar -->    
+    <!-- RESTEASY -->
     <dependency>
-      <groupId>org.jspresso.contrib</groupId>
-      <artifactId>jspresso-tmar</artifactId>
+      <groupId>org.jspresso.framework</groupId>
+      <artifactId>jspresso-application</artifactId>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jaxrs</artifactId>
+      <exclusions>
+      	<exclusion>
+          <groupId>javassist</groupId>
+          <artifactId>javassist</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jsapi</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jaxb-provider</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.xml.stream</groupId>
+        	<artifactId>stax-api</artifactId>
+        </exclusion>
+     </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>stax</groupId>
+      <artifactId>stax-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jackson-provider</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jettison-provider</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.jettison</groupId>
+      <artifactId>jettison</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-links</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.atteo</groupId>
+      <artifactId>evo-inflector</artifactId>
+	</dependency>
+    <!-- END RESTEASY -->
     
   </dependencies>
 
   <build>
-<!--     <testResources> -->
-<!--       <testResource> -->
-<!--         <directory>src/test/resources</directory> -->
-<!--         <filtering>true</filtering> -->
-<!--       </testResource> -->
-<!--     </testResources> -->
-
-
     <plugins>
+<!--       <plugin>
+        <groupId>org.codehaus.gmaven</groupId>
+        <artifactId>gmaven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>compile-groovy-classes</id>
+            <goals>
+              <goal>generateStubs</goal>
+              <goal>compile</goal>
+              
+                  <goal>generateTestStubs</goal>
+                  <goal>testCompile</goal>
+             
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>groovy-path-fix</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target>
+                <property name="groovy.generated.sources" value="${project.build.directory}/generated-sources/groovy-stubs/main" />
+                <mkdir dir="${groovy.generated.sources}" />
+                <delete dir="${project.build.directory}/antrun" />
+              </target>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin> -->
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
@@ -113,35 +140,7 @@
 		  </dependency>
         </dependencies>
       </plugin>
-<!--       <plugin> -->
-<!--         Used by the continuous build to retrieve the war to deploy -->
-<!--         <artifactId>maven-dependency-plugin</artifactId> -->
-<!--         <configuration> -->
-<!--           <artifactItems> -->
-<!--             <artifactItem> -->
-<!--               <groupId>${project.groupId}</groupId> -->
-<!--               <artifactId>stcv-webapp</artifactId> -->
-<!--               <version>${project.version}</version> -->
-<!--               <type>war</type> -->
-<!--               <overWrite>true</overWrite> -->
-<!--             </artifactItem> -->
-<!--           </artifactItems> -->
-<!--           <stripVersion>true</stripVersion>  -->
-<!--         </configuration> -->
-<!--       </plugin> -->
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <configuration>
-          <properties>
-            <property>
-              <name>listener</name>
-              <value>org.jspresso.contrib.tmar.report.TmarReportJunitRunListener</value>
-            </property>
-          </properties>
-        </configuration>
-      </plugin>             
-	<plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
         <executions>

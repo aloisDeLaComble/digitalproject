@@ -10,7 +10,10 @@ import org.jspresso.framework.util.exception.NestedRuntimeException
 
 
 
-class BaseTest extends JspressoSpecification {
+import fr.stgroupe.jspresso.AbstractJUnitJspressoBackendStartup
+
+
+class BaseTest extends AbstractJUnitJspressoBackendStartup {
 
   final static int PORT = 9999
 
@@ -22,15 +25,6 @@ class BaseTest extends JspressoSpecification {
   @Override
   protected String getBeanFactorySelector() {
     return 'digitalproject/beanRefFactory.xml'
-  }
-
-  protected Object setup() {
-    //getController().applicationSession.locale = Locale.ENGLISH
-    // return super.setup() implicit by spock
-  }
-  protected Object cleanup() {
-    getController().cleanupRequestResources()
-    stopServer()
   }
 
   private  Server server
@@ -84,9 +78,9 @@ class BaseTest extends JspressoSpecification {
 
     // Send the message
     log.debug("interrogate server with uri=$uri")
-    log.debug("interrogate server with complete uri=http://localhost:${PORT}/stcv-webapp/rest${(uri[0] != '/' ? '/' : '') + uri}")
+    log.debug("interrogate server with complete uri=http://localhost:${PORT}/digitalproject-webapp/rest${(uri[0] != '/' ? '/' : '') + uri}")
 
-    HttpMethod method = new GetMethod("http://localhost:${PORT}/stcv-webapp/rest${(uri[0] != '/' ? '/' : '') + uri}")
+    HttpMethod method = new GetMethod("http://localhost:${PORT}/digitalproject-webapp/rest${(uri[0] != '/' ? '/' : '') + uri}")
     int statusCode = client.executeMethod(method)
     Map results = [:]
     results.responseBodyAsString = method.responseBodyAsString

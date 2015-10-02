@@ -3,10 +3,7 @@
     "className": "CreateProjectSpecification",
     "report": {
         "iteration": 1,
-        "executionDate": "2015-09-30T18:06:36+0000",
-        "iterationFatalError": "\niteration : 1, runtime Exception No signature of method: javax.servlet.CreateProjectSpecification.getBackendController() is applicable for argument types: () values: [], ",
-        "stackTrace": "[org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:55), org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:78), org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137), javax.servlet.CreateProjectSpecification$_createProjectTest_closure1.doCall(CreateProjectSpecification.groovy:14), sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method), sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62), sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43), java.lang.reflect.Method.invoke(Method.java:497), org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90), groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233), org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:272), groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:909), org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:39), org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45), org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108), org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG.eachTMarIteration(TmarBaseJUnitTestNG.groovy:59), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG.this$2$eachTMarIteration(TmarBaseJUnitTestNG.groovy), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG$this$2$eachTMarIteration$1.callCurrent(Unknown Source), org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG.eachTMarIteration(TmarBaseJUnitTestNG.groovy:95), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG.this$2$eachTMarIteration(TmarBaseJUnitTestNG.groovy), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG$this$2$eachTMarIteration$0.callCurrent(Unknown Source), org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG.eachIteration(TmarBaseJUnitTestNG.groovy:99), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG$eachIteration.callCurrent(Unknown Source), org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:145), javax.servlet.CreateProjectSpecification.createProjectTest(CreateProjectSpecification.groovy:13), sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method), sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62), sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43), java.lang.reflect.Method.invoke(Method.java:497), org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47), org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12), org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44), org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17), org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271), org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70), org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50), org.junit.runners.ParentRunner$3.run(ParentRunner.java:238), org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63), org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236), org.junit.runners.ParentRunner.access$000(ParentRunner.java:53), org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229), org.junit.runners.ParentRunner.run(ParentRunner.java:309), org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86), org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38), org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459), org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675), org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382), org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)]",
-        "nbrError": 1,
+        "executionDate": "2015-10-02T08:03:11+0000",
         "columns": {
             "projectName": {
                 "value": "Land on the Moon",
@@ -14,14 +11,15 @@
                 "isReturnedValue": false
             },
             "student1Firstname": {
-                "value": null,
+                "value": "Neil",
                 "isResult": true,
                 "isReturnedValue": false,
-                "error": true,
+                "error": false,
                 "operation": "=",
                 "expectedValue": "Neil",
                 "reverseEval": false
             }
-        }
+        },
+        "nbrError": 0
     }
 }

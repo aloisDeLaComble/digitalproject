@@ -1,4 +1,4 @@
-package fr.stgroupe.stcv
+package fr.stgroupe.jspresso
 import org.jspresso.framework.application.backend.IBackendController;
 import org.jspresso.framework.application.startup.AbstractBackendStartup;
 import org.springframework.beans.factory.BeanFactory;
@@ -8,11 +8,11 @@ import org.springframework.beans.factory.BeanFactory;
  * parameter to a GefcoSpecification. It also turns public some methods the
  * GefcoSpecification will need to access.
  */
-class SpockBackendStartup extends AbstractBackendStartup {
+class JUnitBackendStartup extends AbstractBackendStartup {
  
-  private JspressoSpecification spec;
+  private AbstractJUnitJspressoBackendStartup spec;
  
-  public SpockBackendStartup(JspressoSpecification spec) {
+  public JUnitBackendStartup(AbstractJUnitJspressoBackendStartup spec) {
     this.spec = spec;
   }
  

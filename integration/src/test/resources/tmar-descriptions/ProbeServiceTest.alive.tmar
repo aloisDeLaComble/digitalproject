@@ -1,0 +1,9 @@
+Test probe service
+
+
+/sequence
+/inline 
+call the [url] /probe/alive | to get the [result ?] SUCCESS |
+/endInline
+
+

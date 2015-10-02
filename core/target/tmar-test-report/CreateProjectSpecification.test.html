@@ -76,8 +76,8 @@
         dataTest.addColumn('number', 'Slices');
 
         dataTest.addRows([
-          ['Succes', 0],
-          ['Error', 1],
+          ['Succes', 1],
+          ['Error', 0],
           ['Not run', 0],
         ]);
 
@@ -97,8 +97,8 @@
         dataIteration.addColumn('number', 'Slices');
 
         dataIteration.addRows([
-          ['Succes', 0],
-          ['Error', 1],
+          ['Succes', 1],
+          ['Error', 0],
         ]);
 
         // ----------------- Set chart options Iterations
@@ -485,17 +485,27 @@
 <div id="CreateProjectSpecification.test-header" class = "testHeader">
 <table class = "TestSummary">
 <tr>
-<td style="background-color: red;">
+<td style="background-color: green;">
 </td>
 <td>
-<NOBR><font size="4"><b> <font color="red">1 ERROR(S)</font> - CreateProjectSpecification</b></font></NOBR><br><NOBR>1 iteration(s) with 1 in error - 30/09/15 20:06:36 - CreateProjectSpecification.test</NOBR><br>
+<NOBR><font size="4"><b> <font color="green">OK</font> - CreateProjectSpecification</b></font></NOBR><br><NOBR>1 iteration(s) with 0 in error - 02/10/15 10:03:11 - CreateProjectSpecification.test</NOBR><br>
 </td>
 </tr>
 </table>
 </div>
 </div>
 <div id="CreateProjectSpecification.test" class="detailTestDiv">
-<br><font size="4" color="red"><b><br>iteration : 1, runtime Exception No signature of method: javax.servlet.CreateProjectSpecification.getBackendController() is applicable for argument types: () values: [], </b></font><br>
-<br><br><font size="2" color="red"><b>[org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:55), org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:78), org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137), javax.servlet.CreateProjectSpecification$_createProjectTest_closure1.doCall(CreateProjectSpecification.groovy:14), sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method), sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62), sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43), java.lang.reflect.Method.invoke(Method.java:497), org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90), groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233), org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:272), groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:909), org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:39), org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45), org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108), org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG.eachTMarIteration(TmarBaseJUnitTestNG.groovy:59), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG.this$2$eachTMarIteration(TmarBaseJUnitTestNG.groovy), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG$this$2$eachTMarIteration$1.callCurrent(Unknown Source), org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG.eachTMarIteration(TmarBaseJUnitTestNG.groovy:95), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG.this$2$eachTMarIteration(TmarBaseJUnitTestNG.groovy), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG$this$2$eachTMarIteration$0.callCurrent(Unknown Source), org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG.eachIteration(TmarBaseJUnitTestNG.groovy:99), org.jspresso.contrib.tmar.core.TmarBaseJUnitTestNG$eachIteration.callCurrent(Unknown Source), org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133), org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:145), javax.servlet.CreateProjectSpecification.createProjectTest(CreateProjectSpecification.groovy:13), sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method), sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62), sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43), java.lang.reflect.Method.invoke(Method.java:497), org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47), org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12), org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44), org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17), org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271), org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70), org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50), org.junit.runners.ParentRunner$3.run(ParentRunner.java:238), org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63), org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236), org.junit.runners.ParentRunner.access$000(ParentRunner.java:53), org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229), org.junit.runners.ParentRunner.run(ParentRunner.java:309), org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86), org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38), org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459), org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675), org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382), org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)]</b></font><br>
-</div></body>
+<p></p><p>Description<br  /></p>
+<p><br  />
+Here are the test values</p>
+    <p></p><table class="tableResult">
+    <caption class="caption resultCaption">SEQUENCE</caption>    <tr>
+         <th class="resultHeader">projectName</th>
+         <th class="resultHeader">student1Firstname </th>
+    </tr>
+         <th class = "resultCell" style="text-align:left;">Land on the Moon</th>
+         <th class = "resultCell" style="text-align:center;" ><font color="green">Neil</font></th>
+    </tr>
+    </table><p></p>
+</div></div></body>
 </html>

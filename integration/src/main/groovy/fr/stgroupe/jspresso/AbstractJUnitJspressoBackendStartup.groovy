@@ -1,4 +1,4 @@
-package fr.stgroupe.stcv;
+package fr.stgroupe.jspresso;
 
 import java.security.acl.Group
 
@@ -22,20 +22,22 @@ import org.springframework.beans.factory.BeanFactory
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.jdbc.datasource.SingleConnectionDataSource
 import org.springframework.transaction.support.TransactionCallbackWithoutResult
+import org.junit.Before
+import org.junit.After
 
 /**
- * Implementation of the Spock specification but loading the JSpresso spring
+ * Implementation of the JUnit specification but loading the JSpresso spring
  * context and initializing the database with reference data
  * 
  * @author Henri Tremblay
  */
-public abstract class JspressoSpecification extends Tmar4JUnit {
+public abstract class AbstractJUnitJspressoBackendStartup extends Tmar4JUnit {
 
   /** Tell if the database reference data were already inserted or not */
   private static boolean            initialized        = false
 
   /** Jspresso startup used underneath */
-  private SpockBackendStartup startup;
+  private JUnitBackendStartup startup;
 
   /** logger for the test */
   private final Logger              log                = LoggerFactory.getLogger(getClass())
@@ -71,7 +73,7 @@ public abstract class JspressoSpecification extends Tmar4JUnit {
   }
 
   /**
-   * Special method called by Spock before every test method call. If does the
+   * Special method called by JUnit before every test method call. If does the
    * following:
    * <ul>
    * <li>Start the Jspresso backend controller by calling {@link #initBackendStartup()}</li>
@@ -94,7 +96,8 @@ public abstract class JspressoSpecification extends Tmar4JUnit {
    * {@link #doAfterReferenceData()};
    * </pre>
    */
-  protected Object setup() {
+  @Before
+  public void setup() {
     startup = initBackendStartup();
 
     BeanFactory factory = startup.getApplicationContext();
@@ -131,7 +134,7 @@ public abstract class JspressoSpecification extends Tmar4JUnit {
   }
 
   /**
-   * Special method called by Spock after every test method call. If does the
+   * Special method called by JUnit after every test method call. If does the
    * following:
    * <ul>
    * <li>Clean the backend controller (<code>cleanupRequestResources</code>)</li>
@@ -140,7 +143,8 @@ public abstract class JspressoSpecification extends Tmar4JUnit {
    * You should usually call the superclass method if you override it. Not cleaning up the
    * backend controller causes connections leaks.
    */
-  protected Object cleanup() {
+  @After
+  public void cleanup() {
     controller.cleanupRequestResources()
     controller.stop()
   }
@@ -150,8 +154,8 @@ public abstract class JspressoSpecification extends Tmar4JUnit {
   /**
    * Constructs and starts the backend startup
    */
-  protected SpockBackendStartup initBackendStartup() {
-    startup = new SpockBackendStartup(this);
+  protected JUnitBackendStartup initBackendStartup() {
+    startup = new JUnitBackendStartup(this);
     startup.start();
     configureApplicationSession(createTestSubject(), getStartupLocale())
     return startup;
