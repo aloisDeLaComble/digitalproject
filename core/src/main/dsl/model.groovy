@@ -11,6 +11,7 @@ Interface('Traceable',
 }
 
 Entity ('Project', extend:'Traceable',toString:'name',
+	icon:'project.png',
 	rendered: ['name','lastUpdateTimestamp','lastUpdatedBy','createTimestamp','createdBy'],
 	queryable: ['name']){
 	string_64 'name'
@@ -22,6 +23,7 @@ Entity ('Project', extend:'Traceable',toString:'name',
 }
 
 Entity ('Technology', extend:'Traceable',toString:'name',
+	icon:'technology.png',
 	rendered: ['name','lastUpdateTimestamp','lastUpdatedBy','createTimestamp','createdBy'],
 	queryable: ['name']){
 	string_64 'name'
@@ -40,6 +42,7 @@ Interface ('Person', extend:'Traceable'){
 Entity ('Trainer',
 		extend: 'Person', 
 		toString:'firstname',
+		icon:'trainer.png',
 		rendered: ['firstname','lastname','lastUpdateTimestamp','lastUpdatedBy','createTimestamp','createdBy'],
 		queryable: ['firstname','lastname']){
 	set 'projectsAsTechnicalTrainer', ref:'Project', reverse:'Project-technicalTrainers'
@@ -52,6 +55,7 @@ Entity ('Trainer',
 Entity ('Student',
 		extend: 'Person', 
 		toString:'firstname',
+		icon:'student.png',
 		rendered: ['firstname','lastname','lastUpdateTimestamp','lastUpdatedBy','createTimestamp','createdBy'],
 		queryable: ['firstname','lastname']){
 	set 'technologies', composition:true, ref:'Technology'

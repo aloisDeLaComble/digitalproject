@@ -25,6 +25,21 @@ split_vertical'Project.proj.view',
 	top:'Project.pane',
 	bottom:'Project-students.table'
 
+	
+		
+/*		
+split_vertical('Project.proj.view',
+				actionMap:'beanModuleActionMap'){
+				top{
+					form(model:'Project')
+				}
+				bottom{
+					table(model:'Project-students',
+						parent:'decoratedView',
+						actionMap:'masterDetailActionMap')
+				}
+}
+*/
 
  
 
