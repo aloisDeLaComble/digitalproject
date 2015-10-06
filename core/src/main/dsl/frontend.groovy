@@ -34,17 +34,20 @@ workspaces:[
 workspace('proj.workspace'){
 		filterModule('proj.projects.module',
 				component:'Project',
-				detailView:'Project.proj.view'
+				detailView:'Project.tab.pane'
 				)
 		filterModule('proj.students.module',
 			component:'Student',
 			detailView:'Student.proj.view')
 		filterModule('proj.trainers.module',
-			component:'Trainer')
+			component:'Trainer',
+			detailView:'Trainer.proj.view')
 		filterModule('proj.technologies.module',
 			component:'Technology')
-		
-	//}
+		filterModule('proj.companies.module',
+			component:'Company')
+		filterModule('proj.years.module',
+			component:'Year')
  }
 
 
@@ -54,19 +57,3 @@ icon:'icon.png',
 context:'digitalproject',
 language:'en',
 workspaces:['proj.workspace']
-
-
-/*controller('digitalproject.controller',
-	context:'digitalproject',
-	language:'en',
-	workspaces:['digitalproject.workspace'])
-
-*/
-
-/*
-workspace('digitalproject.workspace'){
-	filterModule('project.module',
-		component:'Project',
-		detailView:'project.view')
-}
-*/
