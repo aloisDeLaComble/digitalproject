@@ -22,9 +22,19 @@ form('Project.pane',
 		}
 	}
 	
+split_vertical'Project.proj.view',
+	model:'Project',
+	top:'ProjectInfo.tab.pane',
+	bottom:'Project.tab.pane'
+	
+tabs 'ProjectInfo.tab.pane',
+	views:['Project.pane','Traceable.pane']
+
 tabs 'Project.tab.pane',
-	views:['Project.pane','Project-students.table','Project-usesTrainers.table','Project-technicalTrainers.table','Project-technologies.table','Traceable.pane']
-   
+	views:['Project-students.table','Project-usesTrainers.table','Project-technicalTrainers.table','Project-technologies.table']
+	
+	
+
 table'Project-students.table',
 	parent:'decoratedView',
 	actionMap:'masterDetailActionMap'
@@ -40,12 +50,17 @@ table'Project-technicalTrainers.table',
 table'Project-technologies.table',
 	parent:'decoratedView',
 	actionMap:'masterDetailActionMap'
+	
+	
 
+
+tabs 'StudentInfo.tab.pane',
+	views:['Student.pane','Traceable.pane']
 	 
 form('Student.pane',
 	parent:'decoratedView',
 	labelsPosition:'ASIDE',
-	fields:['firstname','lastname','year','photo'],
+	fields:['firstname','lastname','year','photo','projects','technologies'],
 	columnCount:2){
 		actionMap{
 				actionList('FILE'){
@@ -56,23 +71,34 @@ form('Student.pane',
 	}
 
 tabs 'Student.tab.pane',
-	views:['Student.pane','Traceable.pane']
+	views:['Student-technologies.table','Student-projects.table']
 	
+
+
+table'Student-projects.table',	
+	parent:'decoratedView',
+	actionMap:'masterDetailActionMap'
+		
 table'Student-technologies.table',
 	parent:'decoratedView',
 	actionMap:'masterDetailActionMap'
 	
 split_vertical'Student.proj.view',
 	model:'Student',
-	top:'Student.tab.pane',
-	bottom:'Student-technologies.table'
+	top:'StudentInfo.tab.pane',
+	bottom:'Student.tab.pane'
 
+	
+	
+tabs 'TrainerInfo.tab.pane',
+	views:['Trainer.pane','Traceable.pane']
 	
 form('Trainer.pane',
 	parent:'decoratedView',
 	labelsPosition:'ASIDE',
-	fields:['firstname','lastname','photo'],
-	columnCount:2){
+	fields:['firstname','lastname','photo','projectsAsTechnicalTrainer','projectsAsUsesTrainer'],
+	widths:[projectsAsTechnicalTrainer:3,projectsAsUsesTrainer:3],
+	columnCount:3){
 		actionMap{
 				actionList('FILE'){
 					action(ref:'saveModuleObjectFrontAction')
@@ -82,7 +108,15 @@ form('Trainer.pane',
 	}
 
 tabs 'Trainer.tab.pane',
-	views:['Trainer.pane','Traceable.pane']
+	views:['Trainer-technologies.table','Trainer-projectsAsTechnicalTrainer.table','Trainer-projectsAsTechnicalTrainer.table']
+	
+table'Trainer-projectsAsTechnicalTrainer.table',
+	parent:'decoratedView',
+	actionMap:'masterDetailActionMap'
+	
+table 'Trainer-projectsAsUsesTrainer.table',
+	parent:'decoratedView',
+	actionMap:'masterDetailActionMap'
 	
 table'Trainer-technologies.table',
 	parent:'decoratedView',
@@ -90,22 +124,36 @@ table'Trainer-technologies.table',
 	
 split_vertical'Trainer.proj.view',
 	model:'Trainer',
-	top:'Trainer.tab.pane',
-	bottom:'Trainer-technologies.table'
+	top:'TrainerInfo.tab.pane',
+	bottom:'Trainer.tab.pane'
+	
+	
 	
 	
 
 form('Technology.pane',
 	parent:'decoratedView',
 	labelsPosition:'ASIDE',
-	columnCount:5)
+	fields:['name','projects','students','trainers'],
+	columnCount:1)
+
+tabs 'TechnologyInfo.tab.pane',
+	views:['Technology.pane','Traceable.pane']
+
 
 form('Company.pane',
 	parent:'decoratedView',
 	labelsPosition:'ASIDE',
-	columnCount:5)
+	fields:['name','contactFirstName','contactLastName','email','phoneNumber'],
+	widths:[name:2],
+	columnCount:2)
+
+tabs 'CompanyInfo.tab.pane',
+views:['Company.pane','Traceable.pane']
 
 form('Year.pane',
 	parent:'decoratedView',
 	labelsPosition:'ASIDE',
-	columnCount:5)
+	fields:['name','createTimestamp','createdBy','lastUpdateTimestamp','lastUpdatedBy'],
+	widths:[name:2],
+	columnCount:2)

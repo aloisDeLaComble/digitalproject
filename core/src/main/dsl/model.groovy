@@ -11,9 +11,16 @@ Interface('Traceable',
   date_time 'lastUpdateTimestamp', timeZoneAware: true, readOnly: true
 }
 
+Interface('Contactable',
+	extend:'Traceable'
+	){
+	string_128 'email', regex:"[\\w\\-\\.]+@[\\w\\-\\.]+", regexSample:'contact@company.com'
+	string_128 'phoneNumber', regex:"^((\\+|00)33\\s?|0)[1-9](\\s?\\d{2}){4}\$", regexSample:'06 12 34 56 78'
+	}
+			   
 Entity ('Project', extend:'Traceable',toString:'name',
 	icon:'project.png',
-	rendered: ['name','company','lastUpdateTimestamp','lastUpdatedBy','createTimestamp','createdBy'],
+	rendered: ['name','company'],
 	queryable: ['name','company','students']){
 	string_64 'name'
 	set 'technologies', composition:true, ref:'Technology'
@@ -25,7 +32,7 @@ Entity ('Project', extend:'Traceable',toString:'name',
 
 Entity ('Technology', extend:'Traceable',toString:'name',
 	icon:'technology.png',
-	rendered: ['name','lastUpdateTimestamp','lastUpdatedBy','createTimestamp','createdBy'],
+	rendered: ['name'],
 	queryable: ['name']){
 	string_64 'name'
 	set 'projects', ref:'Project', reverse:'Project-technologies'
@@ -35,11 +42,9 @@ Entity ('Technology', extend:'Traceable',toString:'name',
 
 	
 
-Interface ('Person', extend:'Traceable'){
+Interface ('Person', extend:'Contactable'){
 	string_64 'lastname'
 	string_64 'firstname'
-	date_time 'createTimestamp', timeZoneAware: true, readOnly: true
-	date_time 'lastUpdateTimestamp', timeZoneAware: true, readOnly: true
 	binary 'photo', maxLength:1048576, id:'Employee-photo',
 		fileFilter:['images':['.jpg']],
 		fileName:'photo.jpg'
@@ -49,33 +54,31 @@ Entity ('Trainer',
 		extend: 'Person', 
 		toString:'firstname',
 		icon:'trainer.png',
-		rendered: ['firstname','lastname','photo','lastUpdateTimestamp','lastUpdatedBy','createTimestamp','createdBy'],
+		rendered: ['firstname','lastname','photo','email','phoneNumber'],
 		queryable: ['firstname','lastname']){
 	set 'projectsAsTechnicalTrainer', ref:'Project', reverse:'Project-technicalTrainers'
 	set 'projectsAsUsesTrainer', ref:'Project', reverse:'Project-usesTrainers'
 	set 'technologies', composition:true, ref:'Technology'
-	date_time 'createTimestamp', timeZoneAware: true, readOnly: true
-	date_time 'lastUpdateTimestamp', timeZoneAware: true, readOnly: true
 }
 
 Entity ('Student',
 		extend: 'Person', 
 		toString:'firstname',
 		icon:'student.png',
-		rendered: ['firstname','lastname','year','photo','lastUpdateTimestamp','lastUpdatedBy','createTimestamp','createdBy'],
+		rendered: ['firstname','lastname','year','photo','email','phoneNumber'],
 		queryable: ['firstname','lastname','year']){
 	reference 'year', ref:'Year'
 	set 'technologies', composition:true, ref:'Technology'
 	set 'projects', ref:'Project', reverse:'Project-students'
-	date_time 'createTimestamp', timeZoneAware: true, readOnly: true
-	date_time 'lastUpdateTimestamp', timeZoneAware: true, readOnly: true
 }
 	
-Entity ('Company', extend:'Traceable',toString:'name',
+Entity ('Company', extend:'Contactable',toString:'name',
 	icon:'company.png',
-	rendered: ['name','lastUpdateTimestamp','lastUpdatedBy','createTimestamp','createdBy'],
+	rendered: ['name','contactFirstName','contactLastName','email','phoneNumber'],
 	queryable: ['name']){
 	string_64 'name'
+	string_64 'contactFirstName'
+	string_64 'contactLastName'
 }
 
 Entity('Year', extend:'Traceable',toString:'name',

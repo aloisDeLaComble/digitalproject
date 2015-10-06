@@ -34,7 +34,7 @@ workspaces:[
 workspace('proj.workspace'){
 		filterModule('proj.projects.module',
 				component:'Project',
-				detailView:'Project.tab.pane'
+				detailView:'Project.proj.view'
 				)
 		filterModule('proj.students.module',
 			component:'Student',
@@ -43,9 +43,11 @@ workspace('proj.workspace'){
 			component:'Trainer',
 			detailView:'Trainer.proj.view')
 		filterModule('proj.technologies.module',
-			component:'Technology')
+			component:'Technology',
+			detailView:'TechnologyInfo.tab.pane')
 		filterModule('proj.companies.module',
-			component:'Company')
+			component:'Company',
+			detailView:'CompanyInfo.tab.pane')
 		filterModule('proj.years.module',
 			component:'Year')
  }
